@@ -13,6 +13,7 @@ public class M : MonoBehaviour {
 	
 	public static string PREFIX = "/ndn/ucla.edu/apps/matryoshka";
 	
+	
 	public static string GetLabel(Vector3 position)
 	{
 		// decimal points in x,y,z
@@ -255,6 +256,8 @@ public class M : MonoBehaviour {
 		
 		return null;
 	}
+	
+	
 	
 	public static string GetTimeComponent(int addhour = -3, int addmin = -15)
 	{

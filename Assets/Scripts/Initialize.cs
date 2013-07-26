@@ -16,7 +16,7 @@ public class Initialize : MonoBehaviour {
 	public IEnumerator Start () {
 		print("Time: " + DateTime.Now.ToString("HH:mm:ss tt"));
 		
-		string name = M.PREFIX + "/asteroid/octant/0/2/5/6/7/5/5";
+		string name = M.PREFIX + "/asteroid/octant/0/0/7/7/5/7";
 		IntPtr ccn = Egal.GetHandle(); // connect to ccnd
 		Egal.ExpressInterest(ccn, name, RequestCallback, IntPtr.Zero, IntPtr.Zero); // express interest
 		Egal.ccnRun(ccn, -1); // ccnRun starts a new thread
