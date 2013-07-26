@@ -12,6 +12,10 @@ public class DisFish : MonoBehaviour {
 	public static Transform Fish;
 	public static Transform FishParent;
 	
+	public static DateTime fishtime = new DateTime(2013, 7, 25, 15, 23, 0); // simulation time for fish
+	public static DateTime starttime = new DateTime(2013, 7, 25, 15, 23, 0); // simulation starts
+	public static DateTime endtime = new DateTime(2013, 7, 25, 16, 13, 0); // simulation ends
+	
 	// Dictionary < octant label, List<fish id> >
 	public static M.OctIDDic OctFishDic = new M.OctIDDic();
 	
@@ -25,6 +29,7 @@ public class DisFish : MonoBehaviour {
 	 	Fish = GameObject.Find("/fish1").transform;
 		FishParent = GameObject.Find("/Fish").transform;
 		
+		InvokeRepeating("FishTimeTick", 60F, 60F); 
 	}
 	
 	
@@ -109,6 +114,8 @@ public class DisFish : MonoBehaviour {
 		}
 	}
 	
+	
+	
 	public static void AddFishBySpace(List<string> toadd)
 	{
 		if(toadd.Count == 0)
@@ -121,7 +128,7 @@ public class DisFish : MonoBehaviour {
 				continue;
 			}
 			
-			string name = M.PREFIX + "/fish/octant/" + n + "/" + M.GetTimeComponent();
+			string name = M.PREFIX + "/fish/octant/" + n + "/" + GetFishTime();
 			RequestAll(name);
 			OctFishDic.Add(n, null);
 		}
@@ -263,5 +270,24 @@ public class DisFish : MonoBehaviour {
 		Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(info);
 		Vector3 position = M.GetGameCoordinates(values["lat"], values["lon"]);
 		fish.GetComponent<FishSwim>().target = position;
+	}
+	
+	public static void FishTimeTick()
+	{
+		if(DateTime.Compare(fishtime, endtime)<0)
+		{
+			fishtime.AddMinutes(1);
+		}
+		else
+		{
+			fishtime = starttime;
+		}
+		
+	}
+	
+	public static string GetFishTime()
+	{
+		string component = fishtime.ToString("ddd-MMM-dd-HH.mm") + ".00-PDT-" + fishtime.ToString("yyyy");
+		return component;
 	}
 }
