@@ -48,7 +48,7 @@ public class Discovery : MonoBehaviour {
 		}
 		
 		InvokeRepeating("CheckPos", 0, 0.5F); // player position changed
-		InvokeRepeating("CheckEnv", 0, 60F); // environment changed
+		InvokeRepeating("CheckEnv", DisFish.interval, DisFish.interval); // environment changed
 	}
 	
 	void Update()

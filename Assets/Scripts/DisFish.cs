@@ -15,6 +15,7 @@ public class DisFish : MonoBehaviour {
 	public static DateTime fishtime = new DateTime(2013, 7, 25, 15, 23, 0); // simulation time for fish
 	public static DateTime starttime = new DateTime(2013, 7, 25, 15, 23, 0); // simulation starts
 	public static DateTime endtime = new DateTime(2013, 7, 25, 16, 13, 0); // simulation ends
+	public static float interval = 15F;
 	
 	// Dictionary < octant label, List<fish id> >
 	public static M.OctIDDic OctFishDic = new M.OctIDDic();
@@ -29,7 +30,7 @@ public class DisFish : MonoBehaviour {
 	 	Fish = GameObject.Find("/fish1").transform;
 		FishParent = GameObject.Find("/Fish").transform;
 		
-		InvokeRepeating("FishTimeTick", 60F, 60F); 
+		InvokeRepeating("FishTimeTick", interval, interval); 
 	}
 	
 	
@@ -216,11 +217,11 @@ public class DisFish : MonoBehaviour {
 				break;
 			
 			case Upcall.ccn_upcall_kind.CCN_UPCALL_FINAL:
-				print("CCN_UPCALL_FINAL: " + h);
+				//print("CCN_UPCALL_FINAL: " + h);
 				
 				break;
 			case Upcall.ccn_upcall_kind.CCN_UPCALL_INTEREST_TIMED_OUT:
-				print("CCN_UPCALL_INTEREST_TIMED_OUT: " + h);
+				//print("CCN_UPCALL_INTEREST_TIMED_OUT: " + h);
 				break;
 			default: 
 				print("othercallback: " + kind);
@@ -274,6 +275,7 @@ public class DisFish : MonoBehaviour {
 	
 	public static void FishTimeTick()
 	{
+		print("FishTimeTick");
 		if(DateTime.Compare(fishtime, endtime)<0)
 		{
 			fishtime.AddMinutes(1);

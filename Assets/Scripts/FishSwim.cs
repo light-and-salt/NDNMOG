@@ -14,7 +14,7 @@ public class FishSwim : MonoBehaviour {
 		Vector3 relativePos = target - transform.position;
 		relativePos.y = 0;
         transform.rotation = Quaternion.LookRotation(relativePos);
-		transform.position = Vector3.SmoothDamp(transform.position, target, ref velocity, 60f);
+		transform.position = Vector3.SmoothDamp(transform.position, target, ref velocity, DisFish.interval);
 		
 	}
 	
