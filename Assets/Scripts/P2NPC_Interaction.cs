@@ -12,7 +12,7 @@ public class P2NPC_Interaction : MonoBehaviour {
 	private Transform targetNPC;
 	private Transform parent;
 	
-	int step=0;
+	private int step=0;
 	
 	public Transform FindNearestNPC4()
 	{
@@ -39,7 +39,7 @@ public class P2NPC_Interaction : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		step++;
-		if (step==60)
+		if ( step==60 )
 		{
 			parent = GameObject.Find("/Asteroid").transform;
 			Transform nearestNPC4 = FindNearestNPC4();
@@ -52,7 +52,7 @@ public class P2NPC_Interaction : MonoBehaviour {
 			{
 				
 			}
-			step=0;
+			step = 0;
 		}
 	}
 	

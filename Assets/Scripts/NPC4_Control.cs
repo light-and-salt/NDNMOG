@@ -6,14 +6,15 @@ public class NPC4_Control : MonoBehaviour {
 	public string [] NPC4ChatMsg = {"Pouncy...Bouncy","Philosophically braindead","GUI.Box sucks","BBQ Chicken","You gonna fall","Unity crashes!"};
 	
 	public GUIText chatGuiText;
-	//public GUITexture chatGuiTexture;
+	public GUITexture chatGuiTexture;
+	
 	public int guiTime = 2;
 	
 	public IEnumerator guiDisplay()
 	{
 		yield return new WaitForSeconds(guiTime);
 		chatGuiText.gameObject.active = false;
-		//guiTexture.gameObject.active = false;
+		chatGuiTexture.gameObject.active = false;
 	}
 	
 	public void showGUIText()
@@ -21,15 +22,25 @@ public class NPC4_Control : MonoBehaviour {
 		string chatMsg = NPC4ChatMsg[Random.Range(0,NPC4ChatMsg.Length)];
 		Debug.Log(chatMsg);
 		chatGuiText.text = chatMsg;
+		
+		Rect insetRect = chatGuiTexture.pixelInset;
+		insetRect.x = Screen.width/2-10;
+		insetRect.y = Screen.height/2-25;
+		insetRect.width = -Screen.width/2-400+chatMsg.Length*8;
+		insetRect.height = -Screen.height/2-150;
+		//coordinates gained from testing results
+		
+		chatGuiTexture.pixelInset = insetRect;
+		
 		chatGuiText.gameObject.active = true;
-		//guiTexture.gameObject.active = true;
+		chatGuiTexture.gameObject.active = true;
 		StartCoroutine(guiDisplay());
 	}
 	
 	// Use this for initialization
 	void Start () {
 		chatGuiText.gameObject.active = false;
-		//guiTexture.gameObject.active = false;
+		chatGuiTexture.gameObject.active = false;
 	}
 	
 	// Update is called once per frame
