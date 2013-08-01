@@ -9,12 +9,22 @@ public class NPC4_Control : MonoBehaviour {
 	public GUITexture chatGuiTexture;
 	
 	public int guiTime = 2;
+	private Ray ray;
+	
+	public enum state
+	{
+		free,
+		busy
+	}
+	
+	public state status;
 	
 	public IEnumerator guiDisplay()
 	{
 		yield return new WaitForSeconds(guiTime);
 		chatGuiText.gameObject.active = false;
 		chatGuiTexture.gameObject.active = false;
+		status = state.free;
 	}
 	
 	public void showGUIText()
@@ -34,6 +44,9 @@ public class NPC4_Control : MonoBehaviour {
 		
 		chatGuiText.gameObject.active = true;
 		chatGuiTexture.gameObject.active = true;
+		
+		status = state.busy;
+		
 		StartCoroutine(guiDisplay());
 	}
 	
@@ -45,6 +58,40 @@ public class NPC4_Control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	}
 	
+	public void OnMouseUp() 
+	{
+		switch (status)
+		{
+			case state.free:
+			freeInteraction();
+			break;
+			case state.busy:
+			busyInteraction();
+			break;
+		}
+		Debug.Log("Up");
+	}
+	
+	public void OnMouseEnter()
+	{
+		Debug.Log("Mouse enter");
+	}
+	
+	public void OnMouseExit()
+	{
+		Debug.Log("Mouse exit");	
+	}
+	
+	private void freeInteraction()
+	{
+		//status = state.busy;
+		Debug.Log("Enter interaction");
+	}
+	
+	private void busyInteraction()
+	{
+		Debug.Log("Busy now");
 	}
 }
