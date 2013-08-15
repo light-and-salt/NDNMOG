@@ -87,9 +87,10 @@ public class DisAst : MonoBehaviour {
 
 	public static void AddAsteroidBySpace(List<string> toadd)
 	{
+		//note by wzh : toadd is the list of octants' indices that needs to be added.
 		if(toadd.Count == 0)
 			return;
-		
+		print("AddAsteroidBySpace!");
 		foreach(string n in toadd)
 		{
 			if(OctAstDic.ContainsKey(n)==true && n!=Initialize.FirstAsteroidLabel)
@@ -133,7 +134,6 @@ public class DisAst : MonoBehaviour {
 	
 	static Upcall.ccn_upcall_res RequestAllCallback (IntPtr selfp, Upcall.ccn_upcall_kind kind, IntPtr info)
 	{
-		//print("RequestAllCallback: " + kind);
 		Egal.ccn_upcall_info Info = Egal.GetInfo(info);
 		IntPtr h=Info.h;
 		
@@ -223,11 +223,13 @@ public class DisAst : MonoBehaviour {
 		M.Exclude Data = new M.Exclude();
 		IntPtr pData = Marshal.AllocHGlobal(Marshal.SizeOf(Data));
 		Marshal.StructureToPtr(Data, pData, true);
-		
 		//IntPtr ccn = Egal.GetHandle(); // connect to ccnd
 		Handle.Pause();
 		Egal.ExpressInterest(Handle.ccn, name, RequestAllCallback, pData, IntPtr.Zero); // express interest
 		Handle.Resume();
+		//debug by wzh : look into the callback 'RequestAllCallback' when I return.
+		print ("Expressed interest for name : "+name);
+		//result : printed
 	}
 	
 	public static Vector3 MakeAnAsteroid(string info, bool activate = false)

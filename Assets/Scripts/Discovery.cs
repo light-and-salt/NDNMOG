@@ -60,6 +60,8 @@ public class Discovery : MonoBehaviour {
 		DisFish.FishInstantiate();
 	}
 	
+	//notes by wzh : checkPos is done every 0.05 second, to see if doll's in a new region. If so, updateOctantIndex using UpdateAuraNimbusBoundary
+	//and try to fetch all asteroids again
 	void CheckPos() {
 		
 		if( InBound(transform.position) == false )
@@ -71,6 +73,7 @@ public class Discovery : MonoBehaviour {
 			
 			DisAst.DeleteAsteroidBySpace(todelete);
 			DisAst.AddAsteroidBySpace(toadd);
+			//notes by wzh : asteroids data are fetched, only when I'm moving to another region?
 			
 			DisFish.DeleteFishBySpace(todelete);
 			DisFish.AddFishBySpace(toadd);

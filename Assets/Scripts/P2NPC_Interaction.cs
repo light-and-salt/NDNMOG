@@ -66,7 +66,8 @@ public class P2NPC_Interaction : MonoBehaviour {
 		
 		if (Physics.CapsuleCast(transform.position,transform.forward,1,transform.forward,out hit,5))
 		{
-			Debug.Log("Hit "+hit.transform.gameObject.name);	
+			//debug message : what's hit by capsulecast
+			//Debug.Log("Hit "+hit.transform.gameObject.name);	
 			if (hit.transform.gameObject.name == "npc4")
 			{
 				if (hit.transform.gameObject.GetComponent<NPC4_Control>().status == NPC4_Control.state.free)

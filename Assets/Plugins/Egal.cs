@@ -47,10 +47,6 @@ public class Egal: MonoBehaviour {
 		return 0;
 	}
 	
-	
-
-	
-	
 	// ccnRun()
 	// takes handle and time
 	// starts a new thread and run ccn_run on the handle for the specified time
@@ -309,6 +305,12 @@ public class Egal: MonoBehaviour {
 	
 	// Aggregated Functions//
 	//==================================//	
+	[DllImport ("Egal")]
+	public static extern int zhehaoDebug(Delegate h);
+	
+	[DllImport ("Egal")]
+	public static extern int sync1();
+	
 	[DllImport ("Egal")]
 	public static extern int WriteSlice(IntPtr h, System.String prefix, System.String topo);
 	// returns 0 for success
