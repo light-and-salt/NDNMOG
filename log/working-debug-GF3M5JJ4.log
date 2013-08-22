@@ -1,0 +1,16 @@
+My name : GF3M5JJ4
+myName : GF3M5JJ4, received name : ZM4XBKHY
+Expressed interest name : ccnx:/ndn/ucla.edu/apps/Matryoshka/doll/name/ZM4XBKHY/position
+myName : GF3M5JJ4, received name : ZM4XBKHY
+Expressed interest name : ccnx:/ndn/ucla.edu/apps/Matryoshka/doll/name/ZM4XBKHY/position
+Name GF3M5JJ4, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/Matryoshka/doll/name/GF3M5JJ4/position
+Ends.
+ccn_put
+sync2 CCN_UPCALL_CONTENT
+Recved string:ZM4XBKHY-0/0/7/7/5/7/6-(16316.7, 14241.7, 15748.6)
+Player instantiated:ZM4XBKHY-0/0/7/7/5/7/6-(16316.7, 14241.7, 15748.6)
+sync2 CCN_UPCALL_FINAL
+sync2 CCN_UPCALL_CONTENT
+Recved string:ZM4XBKHY-0/0/7/7/5/7/6-(16316.7, 14241.7, 15748.6)
+sync2 CCN_UPCALL_FINAL

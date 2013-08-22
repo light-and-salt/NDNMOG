@@ -1,0 +1,11 @@
+My name : R6ZLGQTB
+myName : R6ZLGQTB, received name : LWSWQZES
+Expressed interest name : ccnx:/ndn/ucla.edu/apps/Matryoshka/doll/name/LWSWQZES/position
+sync2 CCN_UPCALL_CONTENT
+Recved string:LWSWQZES-0/0/7/7/5/7/6-(16316.7, 14244.5, 15748.6)
+Player instantiated:LWSWQZES-0/0/7/7/5/7/6-(16316.7, 14244.5, 15748.6)
+sync2 CCN_UPCALL_FINAL
+Name R6ZLGQTB, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/Matryoshka/doll/name/R6ZLGQTB/position
+Ends.
+ccn_put

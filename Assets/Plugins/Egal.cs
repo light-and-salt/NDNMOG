@@ -310,7 +310,7 @@ public class Egal: MonoBehaviour {
 	public static extern int expressSyncInterest(String octIndex, IntPtr h, Delegate callback);
 	
 	[DllImport ("Egal")]
-	public static extern int setSyncInterestFilter(IntPtr h, Delegate callback);
+	public static extern int setSyncInterestFilter(IntPtr h, Delegate callback, string syncInterestPrefix, Delegate debugCallback);
 	
 	[DllImport ("Egal")]
 	public static extern int octListAddName(String octIndex, String name);

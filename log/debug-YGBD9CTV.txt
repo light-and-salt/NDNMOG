@@ -1,0 +1,12 @@
+debugCallback : ccnx:/ndn/ucla.edu/apps/matryoshka/doll/octant/
+Registered sync2 interest: ccnx:/ndn/ucla.edu/apps/matryoshka/doll/name/
+myName : YGBD9CTV, received name : QK1DENUD
+Expressed interest name : ccnx:/ndn/ucla.edu/apps/matryoshka/doll/name/QK1DENUD/position/
+Name YGBD9CTV, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/YGBD9CTV/position
+Ends.
+ccn_put
+sync2 CCN_UPCALL_CONTENT
+Recved string:QK1DENUD-0/0/7/7/5/7/6-(16316.7, 14243.4, 15748.6)
+Player instantiated:QK1DENUD-0/0/7/7/5/7/6-(16316.7, 14243.4, 15748.6)
+sync2 CCN_UPCALL_FINAL

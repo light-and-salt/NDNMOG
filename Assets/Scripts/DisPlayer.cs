@@ -17,11 +17,15 @@ public class DisPlayer : MonoBehaviour
 	
 	public static M.OctIDDic octPlayerList = new M.OctIDDic();
 	public static testCallbackDelegate h;
+	public static debugCallbackDelegate debugH;
 	//delegate function can work with function pointer in C
 	public delegate int testCallbackDelegate(String octIndex, String setDifference);
+	public delegate int debugCallbackDelegate(String debugStr);
 	
-	public const string prefixStr = "ccnx:/ndn/ucla.edu/apps/Matryoshka/";
-	public const string registerStrPrefix = "doll/name/";
+	public const string prefixStr = "ccnx:/ndn/ucla.edu/apps/matryoshka/";
+	public const string uniStrPrefix = "doll/name/";
+	public const string syncStrPrefix = "doll/octant/";
+	public const string posStrPrefix = "/position/";
 	
 	public static string debugFilePath = "";
 	
@@ -34,23 +38,38 @@ public class DisPlayer : MonoBehaviour
 		var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		var random = new System.Random();
 		myName = new string(Enumerable.Repeat(chars, nameLength).Select(s => s[random.Next(s.Length)]).ToArray());
-		debugFilePath = "log/debug-" + myName + ".log";
+		debugFilePath = "log/debug-" + myName + ".txt";
+	}
+	
+	public static int debugCallback(String debugStr)
+	{
+		print ("debugCallback : " + debugStr);
+		System.IO.File.AppendAllText(debugFilePath, "debugCallback : " + debugStr + "\n");
+		return 1;
 	}
 	
 	public static int syncOneCallback(String octIndex, String setDifference)
 	{
-		string [] names = setDifference.Split('-');
-		foreach (string s in names)
+		if (octIndex != null)
 		{
-			//why is there empty string in splitted names?
-			if (s!=myName && s!=null && s!="")
+			string [] names = setDifference.Split('-');
+			foreach (string s in names)
 			{
-				string interestName = prefixStr + registerStrPrefix + s + "/position";
-				Egal.ExpressInterest(Handle.ccn, interestName, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
-				Debug.Log(s + " ");
+			//why is there empty string in splitted names?
+				if (s!=myName && s!=null && s!="")
+				{
+					string interestName = prefixStr + uniStrPrefix + s + posStrPrefix;
+					Egal.ExpressInterest(Handle.ccn, interestName, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
+					Debug.Log(s + " ");
 				
-				System.IO.File.AppendAllText(debugFilePath,"myName : " + myName + ", received name : " + s + "\nExpressed interest name : " + interestName + "\n");
+					System.IO.File.AppendAllText(debugFilePath,"myName : " + myName + ", received name : " + s + "\nExpressed interest name : " + interestName + "\n");
+				}
 			}
+		}
+		else
+		{
+			print ("Sync1 callback msg." + setDifference);
+			System.IO.File.AppendAllText(debugFilePath,"Sync1 callback msg." + setDifference + "\n");
 		}
 		return 1;
 	}
@@ -81,6 +100,7 @@ public class DisPlayer : MonoBehaviour
 		case Upcall.ccn_upcall_kind.CCN_UPCALL_CONTENT:
 			Egal.ccn_upcall_info upcallInfo = (Egal.ccn_upcall_info)Marshal.PtrToStructure(info, typeof(Egal.ccn_upcall_info));
 			string content = Egal.GetContentValue(upcallInfo.content_ccnb, upcallInfo.pco);
+			
 			System.IO.File.AppendAllText(debugFilePath,"Recved string:" + content + "\n");
 			string [] splitStr = content.Split('-');
 			string playerName = splitStr[0];
@@ -90,10 +110,10 @@ public class DisPlayer : MonoBehaviour
 			
 			if (octPlayerList.Contains(playerOct,playerName)==false)
 			{
-				octPlayerList.Add(playerOct,playerName);
-				Egal.octListAddName(playerOct,playerName);
-				instantiateNewPlayer(playerName, playerPos);
-				System.IO.File.AppendAllText(debugFilePath,"Player instantiated:" + playerName + "-" + playerOct + "-" + playerPos + "\n");
+				octPlayerList.Add(playerOct, playerName);
+				Egal.octListAddName(playerOct, playerName);
+				instantiateNewPlayer(playerName,  playerPos);
+				System.IO.File.AppendAllText(debugFilePath, "Player instantiated:" + playerName + "-" + playerOct + "-" + playerPos + "\n");
 			}
 			else
 			{
@@ -129,7 +149,7 @@ public class DisPlayer : MonoBehaviour
 			//s is the full name of the interest, so I use contains instead, which maybe dangerous if some very rare situations happen
 			if (s.Contains(myName))
 			{
-				string returnStr = myName + "-" + Discovery.aura[0] + "/-" + GameObject.Find("/player").transform.position;
+				string returnStr = myName + "-" + Discovery.aura[0] + "-" + GameObject.Find("/player").transform.position;
 				//I failed when trying to use C# code to sign and return content...using C library code instead
 				//remember : there's a trailing '/' behind discovery.aura
 				Egal.returnVerifiedStrContent(returnStr , info);
@@ -163,22 +183,19 @@ public class DisPlayer : MonoBehaviour
 				}
 			}
 		}
-		//string interestName = "ccnx:/ndn/ucla.edu/apps/Matryoshka/doll/" + ;
-		//Egal.ExpressInterest(Handle.ccn, interestName, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
 	}
 	
 	//test initiates sync1 actions.
 	public static void test()
-	{
-		System.IO.File.AppendAllText(debugFilePath, "My name : " + myName+"\n");
-			
+	{	
 		h = new testCallbackDelegate(syncOneCallback);
+		debugH = new debugCallbackDelegate(debugCallback);
 		//set interest filter for sync interests
-		Egal.setSyncInterestFilter(Handle.ccn,h);
+		Egal.setSyncInterestFilter(Handle.ccn, h, prefixStr + syncStrPrefix, debugH);
 		
 		//set interest filter for unicast interests
 		IntPtr name = Egal.ccn_charbuf_create();
-		string nameStr = prefixStr + registerStrPrefix;
+		string nameStr = prefixStr + uniStrPrefix;
 		
 		Egal.ccn_name_from_uri(name, nameStr);
 		
@@ -187,6 +204,7 @@ public class DisPlayer : MonoBehaviour
 		Marshal.StructureToPtr(closure, pnt, true);
 		
 		Egal.ccn_set_interest_filter(Handle.ccn, name, pnt);
+		System.IO.File.AppendAllText(debugFilePath, "Registered sync2 interest: " + prefixStr + uniStrPrefix +"\n");
 	}
 	
 	public static void addPlayerBySpace(List<String> toadd)
@@ -197,14 +215,16 @@ public class DisPlayer : MonoBehaviour
 		}
 		else
 		{
-			if (octPlayerList.Contains(Discovery.aura[0]+"/",myName) == false)
+			if (octPlayerList.Contains(Discovery.aura[0],myName) == false)
 			{
-				octPlayerList.Add(Discovery.aura[0]+"/",myName);
-				Egal.octListAddNode(Discovery.aura[0]+"/");
-				Egal.octListAddName(Discovery.aura[0]+"/", myName);
+				print ("myName added."+Discovery.aura[0]+" "+myName);
+				octPlayerList.Add(Discovery.aura[0], myName);
+				Egal.octListAddNode(Discovery.aura[0]);
+				Egal.octListAddName(Discovery.aura[0], myName);
 			}
 			foreach (String oct in toadd)
 			{
+				Egal.octListAddNode(oct);
 				Egal.expressSyncInterest(oct, Handle.ccn, h);
 				expressPositionInterest(myName);
 			}
