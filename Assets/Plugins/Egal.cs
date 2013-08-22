@@ -135,12 +135,6 @@ public class Egal: MonoBehaviour {
 		//string [] split = contentname.Split(new char [] {'/'},StringSplitOptions.RemoveEmptyEntries);
 		return contentname;
 	}
-	
-	
-	
-	
-	
-	
 	/////////////////////////////////////////////////////////////////
 	//////////////////////// CCNx Library ///////////////////////////
 	/////////////////////////////////////////////////////////////////
@@ -229,7 +223,7 @@ public class Egal: MonoBehaviour {
     	public IntPtr h;              /**< The ccn library handle */
     	/* Interest (incoming or matched) */
     	IntPtr interest_ccnb;
-    	IntPtr pi;
+    	public IntPtr pi;
     	IntPtr interest_comps;
     	int matched_comps;
     	/* Incoming content for CCN_UPCALL_CONTENT* - otherwise NULL */
@@ -305,11 +299,44 @@ public class Egal: MonoBehaviour {
 	
 	// Aggregated Functions//
 	//==================================//	
+	
 	[DllImport ("Egal")]
 	public static extern int zhehaoDebug(Delegate h);
 	
 	[DllImport ("Egal")]
-	public static extern int sync1();
+	public static extern int syncSetInterestFilter(IntPtr h);
+	
+	[DllImport ("Egal")]
+	public static extern int expressSyncInterest(String octIndex, IntPtr h, Delegate callback);
+	
+	[DllImport ("Egal")]
+	public static extern int setSyncInterestFilter(IntPtr h, Delegate callback);
+	
+	[DllImport ("Egal")]
+	public static extern int octListAddName(String octIndex, String name);
+	
+	[DllImport ("Egal")]
+	public static extern int octListDeleteName(String octIndex, String name);
+	
+	[DllImport ("Egal")]
+	public static extern IntPtr octListAddNode(String octIndex);
+	
+	[DllImport ("Egal")]
+	public static extern int octListRemoveNodeByIndex(String octIndex);
+	
+	[DllImport ("Egal")]
+	public static extern IntPtr queryOctListByOctIndex(String octIndex);
+	
+	[DllImport ("Egal")]
+	public static extern string getInterestNameFromPI(IntPtr pi);
+	
+	[DllImport ("Egal")]
+	public static extern int ccn_charbuf_append_string(IntPtr c, string s);
+	
+	[DllImport ("Egal")]
+	public static extern int returnVerifiedStrContent(string str, IntPtr info);
+	//[DllImport ("Egal")]
+	//public static extern int 
 	
 	[DllImport ("Egal")]
 	public static extern int WriteSlice(IntPtr h, System.String prefix, System.String topo);

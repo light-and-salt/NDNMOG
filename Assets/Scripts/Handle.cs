@@ -6,6 +6,7 @@ using System.Threading;
 public class Handle : MonoBehaviour {
 
 	public static IntPtr ccn; // handle
+	
     private static ManualResetEvent _pauseEvent = new ManualResetEvent(true);
     private static Thread _thread;
 	//private static bool IsPlaying = true;

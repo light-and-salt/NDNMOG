@@ -19,6 +19,9 @@ public class Initialize : MonoBehaviour {
 		string name = M.PREFIX + "/asteroid/octant/0/0/7/7/5/7";
 		IntPtr ccn = Egal.GetHandle(); // connect to ccnd
 		Egal.ExpressInterest(ccn, name, RequestCallback, IntPtr.Zero, IntPtr.Zero); // express interest
+		//modification by wzh : register the names I'm interested in on startup.
+		//sEgal.setSyncInterestFilter(ccn);
+		//note by wzh : ccnRun is using another thread for running CCN
 		Egal.ccnRun(ccn, -1); // ccnRun starts a new thread
 		
 		while(FirstAsteroid == "")

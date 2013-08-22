@@ -307,6 +307,12 @@ public class M : MonoBehaviour {
 		// dictionary < oct label, list<id> >
 		private static Dictionary<string,List<string>> dic = new Dictionary<string, List<string>>();
 		
+		// modifications by wzh on OctIDDic to fit in the usage of sync2 send position interest.
+		public Dictionary<string,List<string>> getDic()
+		{
+			return dic;
+		}
+		
 		public void Add(string oct, string id)
 		{
 			if(oct==null || oct=="")

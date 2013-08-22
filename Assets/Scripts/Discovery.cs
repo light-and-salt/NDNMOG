@@ -46,7 +46,10 @@ public class Discovery : MonoBehaviour {
 		{
 			yield return new WaitForSeconds(0.05f);
 		}
-		
+		//script by wzh : set_interest_filter
+		DisPlayer.generateRandomMyName();
+		DisPlayer.test();
+		//ends
 		InvokeRepeating("CheckPos", 0, 0.5F); // player position changed
 		InvokeRepeating("CheckEnv", DisFish.interval, DisFish.interval); // environment changed
 	}
@@ -71,9 +74,14 @@ public class Discovery : MonoBehaviour {
 			List<string> toadd = nimbus.Except(oldnimbus).ToList();
 			List<string> todelete = oldnimbus.Except(nimbus).ToList();
 			
+			//script by wzh
+			DisPlayer.deletePlayerBySpace(todelete);
+			//using nimbus instead of toadd
+			DisPlayer.addPlayerBySpace(nimbus);
+			//ends
+			
 			DisAst.DeleteAsteroidBySpace(todelete);
 			DisAst.AddAsteroidBySpace(toadd);
-			//notes by wzh : asteroids data are fetched, only when I'm moving to another region?
 			
 			DisFish.DeleteFishBySpace(todelete);
 			DisFish.AddFishBySpace(toadd);

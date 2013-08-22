@@ -90,7 +90,6 @@ public class DisAst : MonoBehaviour {
 		//note by wzh : toadd is the list of octants' indices that needs to be added.
 		if(toadd.Count == 0)
 			return;
-		print("AddAsteroidBySpace!");
 		foreach(string n in toadd)
 		{
 			if(OctAstDic.ContainsKey(n)==true && n!=Initialize.FirstAsteroidLabel)
@@ -224,12 +223,11 @@ public class DisAst : MonoBehaviour {
 		IntPtr pData = Marshal.AllocHGlobal(Marshal.SizeOf(Data));
 		Marshal.StructureToPtr(Data, pData, true);
 		//IntPtr ccn = Egal.GetHandle(); // connect to ccnd
-		Handle.Pause();
+		//Handle.Pause();
 		Egal.ExpressInterest(Handle.ccn, name, RequestAllCallback, pData, IntPtr.Zero); // express interest
-		Handle.Resume();
-		//debug by wzh : look into the callback 'RequestAllCallback' when I return.
-		print ("Expressed interest for name : "+name);
-		//result : printed
+		//Handle.Resume();
+		//debug by wzh : Handle doesn't seem necessary to pause/resume when expressing interest.
+		//print ("Expressed interest for name : "+name);
 	}
 	
 	public static Vector3 MakeAnAsteroid(string info, bool activate = false)
