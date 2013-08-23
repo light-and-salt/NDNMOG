@@ -74,8 +74,11 @@ public class Initialize : MonoBehaviour {
 		return Upcall.ccn_upcall_res.CCN_UPCALL_RESULT_OK;
 	}
 	
-	
-	
+	//added by wzh, limit framerate to reduce heat generated
+	public void Awake()
+	{
+		Application.targetFrameRate = 30;
+	}
 
 	
 }

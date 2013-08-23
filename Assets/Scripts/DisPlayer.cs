@@ -149,7 +149,7 @@ public class DisPlayer : MonoBehaviour
 					}
 					System.IO.File.AppendAllText (debugFilePath, "Datetime and pos updated.\n");
 				}
-			//express interest with exclusion filter again ?
+				//express interest again...not using exclusion filter here.
 			
 				string [] nameComponents = outsInterestStr.Split ('/');
 				outsInterestStr = "";
