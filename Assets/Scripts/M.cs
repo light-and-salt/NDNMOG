@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System;
 using System.Threading;
 
-
 public class M : MonoBehaviour {
 	
 	// M for Matryoshka
@@ -12,7 +11,8 @@ public class M : MonoBehaviour {
 	// It's mostly about octree partitioning of the game world
 	
 	public static string PREFIX = "/ndn/ucla.edu/apps/matryoshka";
-	
+	//wzh defined queuesize
+	public const int queueSize = 30;
 	
 	public static string GetLabel(Vector3 position)
 	{
@@ -301,6 +301,251 @@ public class M : MonoBehaviour {
 		
 		
 	}
+	
+	/******wzh added class, for player struct******/
+	public enum eventEnum
+	{
+		position,
+		jump
+	}
+	
+	public class cEvent
+	{
+		private Time eventTime;
+		private eventEnum eventType;
+		
+		public cEvent(Time t, eventEnum e)
+		{
+			eventTime = t;
+			eventType = e;
+		}
+		
+		public int setTime(Time t)
+		{
+			eventTime = t;
+			return 1;
+		}
+		
+		public int setType(eventEnum e)
+		{
+			eventType = e;
+			return 1;
+		}
+		
+		public Time getTime()
+		{
+			return 	eventTime;
+		}
+		
+		public eventEnum getType()
+		{
+			return eventType;	
+		}
+	}
+
+	public class circularEventQueue
+	{
+		public cEvent [] eventArray;
+		int front;
+		int rear;
+		int actualSize;
+		
+		public circularEventQueue(int size = queueSize)
+		{
+			eventArray = new cEvent[size];
+			front = 0;
+			rear = 0;
+			actualSize = size;
+		}
+		
+		public int enqueue(cEvent tempEvent)
+		{
+			eventArray[front] = tempEvent;
+			front = (front + 1) % actualSize;
+			if (front == rear)
+			{
+				rear = (rear + 1) % actualSize;
+			}
+			return 1;
+		}
+		
+		public cEvent dequeue()
+		{
+			int index = rear;
+			if (rear == front)
+			{
+				return null;
+			}
+			else
+			{
+				rear = (rear + 1) % actualSize;
+				return eventArray[index];
+			}
+		}
+		
+		public cEvent getLatest()
+		{
+			int index = rear;
+			if (rear == front)
+			{
+				return null;
+			}
+			else
+			{
+				return eventArray[(front - 1) % actualSize];
+			}
+		}
+	}
+	
+	public class cMyState
+	{
+		private string name;
+		private circularEventQueue eventQueue;
+		
+		public cMyState(string playerName)
+		{
+			name = playerName;
+			eventQueue = new circularEventQueue();
+		}
+		
+		public int insertEvent(cEvent e)
+		{
+			eventQueue.enqueue(e);
+			return 1;
+		}
+		
+		public cEvent getLatestEvent()
+		{
+			return eventQueue.getLatest();
+		}
+	}
+	
+	public class cPlayerTime
+	{
+		private string name;
+		private System.DateTime time;
+		private Transform transform;
+		
+		public int setPos(Vector3 pos)
+		{
+			transform.position = pos;
+			System.IO.File.AppendAllText(DisPlayer.debugFilePath, "name : " + name + " set Pos executed : " + pos);
+			return 1;
+		}
+		
+		public cPlayerTime(string s, System.DateTime t, Transform trans)
+		{
+			name = s;
+			time = t;
+			transform = trans;
+		}
+		
+		public string getName ()
+		{
+			return name;	
+		}
+		
+		public int setName(string tempName)
+		{
+			name = tempName;
+			return 1;
+		}
+		
+		public System.DateTime getTime()
+		{
+			return time;
+		}
+		
+		public int setTime(System.DateTime t)
+		{
+			time = t;
+			return 1;
+		}
+	}
+	
+	public class cOctPlayerDic
+	{
+		private static Dictionary<string,List<cPlayerTime>> dic = new Dictionary<string, List<cPlayerTime>>();
+		
+		public Dictionary<string,List<cPlayerTime>> getDic()
+		{
+			return dic;
+		}
+		
+		public cPlayerTime getPlayerTimeByName(string oct, string playerName)
+		{
+			if (dic.ContainsKey(oct))
+			{
+				foreach (cPlayerTime tempPT in dic[oct])
+				{
+					if (tempPT.getName() == playerName)
+					{
+						return tempPT;
+					}
+				}
+			}
+			return null;
+		}
+		
+		public bool updatePlayerTime(string oct, cPlayerTime playerTime, System.DateTime t)
+		{
+			if (playerTime != null)
+			{
+				if (playerTime.getTime() < t)
+				{
+					playerTime.setTime(t);
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		public void Add(string oct, cPlayerTime playerTime)
+		{
+			if(oct==null || oct=="")
+				return;
+	
+			if( playerTime == null && dic.ContainsKey(oct)==false)
+			{
+				dic.Add (oct,new List<cPlayerTime>());
+				return;
+			}
+			
+			if( playerTime != null && dic.ContainsKey(oct)==false)
+			{
+				dic.Add (oct,new List<cPlayerTime>());
+				dic[oct].Add(playerTime);
+				return;
+			}
+			
+			if( playerTime != null && dic.ContainsKey(oct)==true)
+			{
+				dic[oct].Add(playerTime);
+				return;
+			}
+		}
+		
+		public bool ContainsKey(string oct)
+		{
+			return dic.ContainsKey(oct);
+		}
+		
+		public void Remove(string oct)
+		{
+			dic.Remove(oct);
+		}
+		
+		public int Count()
+		{
+			return dic.Count;
+		}
+		
+		public void Clear()
+		{
+			dic.Clear();
+		}
+	}
+	/******wzh added classes ends******/
 	
 	public class OctIDDic
 	{

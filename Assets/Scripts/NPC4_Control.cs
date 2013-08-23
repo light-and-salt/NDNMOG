@@ -65,15 +65,15 @@ public class NPC4_Control : MonoBehaviour {
 		switch (status)
 		{
 			case state.free:
-			freeInteraction();
+			//freeInteraction();
 			break;
 			case state.busy:
-			busyInteraction();
+			//busyInteraction();
 			break;
 		}
 		Debug.Log("Up");
 	}
-	
+	/*
 	public void OnMouseEnter()
 	{
 		Debug.Log("Mouse enter");
@@ -94,4 +94,5 @@ public class NPC4_Control : MonoBehaviour {
 	{
 		Debug.Log("Busy now");
 	}
+	*/
 }

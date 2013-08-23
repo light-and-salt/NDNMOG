@@ -1,7 +1,2 @@
-sync_trax
-SyncTest
-*.a
-*.o
-*.dSYM
-*.dSYM/*
+ccnr
 Makefile

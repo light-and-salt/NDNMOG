@@ -77,7 +77,7 @@ public class Discovery : MonoBehaviour {
 			//script by wzh
 			DisPlayer.deletePlayerBySpace(todelete);
 			//using nimbus instead of toadd
-			DisPlayer.addPlayerBySpace(nimbus);
+			DisPlayer.addPlayerBySpace(toadd);
 			//ends
 			
 			DisAst.DeleteAsteroidBySpace(todelete);

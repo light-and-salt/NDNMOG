@@ -335,6 +335,9 @@ public class Egal: MonoBehaviour {
 	
 	[DllImport ("Egal")]
 	public static extern int returnVerifiedStrContent(string str, IntPtr info);
+	
+	[DllImport ("Egal")]
+	public static extern string getNameLastStrComponent(IntPtr info);
 	//[DllImport ("Egal")]
 	//public static extern int 
 	

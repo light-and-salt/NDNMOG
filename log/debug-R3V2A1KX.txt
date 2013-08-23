@@ -1,0 +1,635 @@
+debugCallback : ccnx:/ndn/ucla.edu/apps/matryoshka/doll/octant/
+Registered sync2 interest: ccnx:/ndn/ucla.edu/apps/matryoshka/doll/name/
+myName : R3V2A1KX, received name : LXNPLBRY
+Expressed interest name : ccnx:/ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/init/
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.7, 14244.7, 15748.6)-08/23/2013 10:54:18
+Player instantiated:LXNPLBRY-0/0/7/7/5/7/6-(16316.7, 14244.7, 15748.6)
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.7, 14244.7, 15748.6)-08/23/2013 10:54:18
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/init
+Ends.
+ccn_put
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.8, 14241.7, 15748.6)-08/23/2013 10:54:20
+name : LXNPLBRY set Pos executed : (16316.8, 14241.7, 15748.6)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.8, 14241.7, 15748.6)-08/23/2013 10:54:20
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A20
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:20
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.8, 14241.7, 15748.4)-08/23/2013 10:54:21
+name : LXNPLBRY set Pos executed : (16316.8, 14241.7, 15748.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.8, 14241.7, 15748.4)-08/23/2013 10:54:21
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A21
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:21
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.9, 14241.4, 15744.6)-08/23/2013 10:54:22
+name : LXNPLBRY set Pos executed : (16315.9, 14241.4, 15744.6)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.9, 14241.4, 15744.6)-08/23/2013 10:54:22
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A22
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:22
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:23
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:23
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.8%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A23
+Ends.
+parsed last name prefix received : (16316.8, 14241.7, 15748.6)-08/23/2013 10:54:23
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:24
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:24
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A24
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:24
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:25
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:25
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A25
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:25
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:26
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:26
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A26
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:26
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:27
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:27
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A27
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:27
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:28
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:28
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.8%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A28
+Ends.
+parsed last name prefix received : (16316.8, 14241.7, 15748.6)-08/23/2013 10:54:28
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:29
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:29
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015748.6%29-08%2F23%2F2013%2010%3A54%3A29
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15748.6)-08/23/2013 10:54:29
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:30
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:30
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.6%2C%2014241.7%2C%2015748.3%29-08%2F23%2F2013%2010%3A54%3A30
+Ends.
+parsed last name prefix received : (16316.6, 14241.7, 15748.3)-08/23/2013 10:54:30
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:31
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:31
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.4%2C%2014241.1%2C%2015743.7%29-08%2F23%2F2013%2010%3A54%3A31
+Ends.
+parsed last name prefix received : (16318.4, 14241.1, 15743.7)-08/23/2013 10:54:31
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:32
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:32
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816321.7%2C%2014240.5%2C%2015742.9%29-08%2F23%2F2013%2010%3A54%3A32
+Ends.
+parsed last name prefix received : (16321.7, 14240.5, 15742.9)-08/23/2013 10:54:32
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:33
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:33
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816320.8%2C%2014240.7%2C%2015746.3%29-08%2F23%2F2013%2010%3A54%3A33
+Ends.
+parsed last name prefix received : (16320.8, 14240.7, 15746.3)-08/23/2013 10:54:33
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:34
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:34
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816317.3%2C%2014241.6%2C%2015748.3%29-08%2F23%2F2013%2010%3A54%3A34
+Ends.
+parsed last name prefix received : (16317.3, 14241.6, 15748.3)-08/23/2013 10:54:34
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:35
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:35
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.8%2C%2014241.7%2C%2015749.3%29-08%2F23%2F2013%2010%3A54%3A35
+Ends.
+parsed last name prefix received : (16316.8, 14241.7, 15749.3)-08/23/2013 10:54:35
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:36
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:36
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015749.3%29-08%2F23%2F2013%2010%3A54%3A36
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15749.3)-08/23/2013 10:54:36
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:37
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:37
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.8%2C%2014241.7%2C%2015749.3%29-08%2F23%2F2013%2010%3A54%3A37
+Ends.
+parsed last name prefix received : (16316.8, 14241.7, 15749.3)-08/23/2013 10:54:37
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:38
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:38
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015749.3%29-08%2F23%2F2013%2010%3A54%3A38
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15749.3)-08/23/2013 10:54:38
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:39
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:39
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.7%2C%2014241.7%2C%2015749.3%29-08%2F23%2F2013%2010%3A54%3A39
+Ends.
+parsed last name prefix received : (16316.7, 14241.7, 15749.3)-08/23/2013 10:54:39
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:40
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:40
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.8%2C%2014241.7%2C%2015749.3%29-08%2F23%2F2013%2010%3A54%3A40
+Ends.
+parsed last name prefix received : (16316.8, 14241.7, 15749.3)-08/23/2013 10:54:40
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:41
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:41
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.9%2C%2014241.7%2C%2015749.2%29-08%2F23%2F2013%2010%3A54%3A41
+Ends.
+parsed last name prefix received : (16316.9, 14241.7, 15749.2)-08/23/2013 10:54:41
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:42
+name : LXNPLBRY set Pos executed : (16315.7, 14241.3, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.3, 15744.1)-08/23/2013 10:54:42
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A42
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:42
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.9, 14241.3, 15744.2)-08/23/2013 10:54:43
+name : LXNPLBRY set Pos executed : (16315.9, 14241.3, 15744.2)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.9, 14241.3, 15744.2)-08/23/2013 10:54:43
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A43
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:54:43
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.7, 14241.6, 15748.1)-08/23/2013 10:54:44
+name : LXNPLBRY set Pos executed : (16316.7, 14241.6, 15748.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.7, 14241.6, 15748.1)-08/23/2013 10:54:44
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A44
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:54:44
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.8, 14241.7, 15748.5)-08/23/2013 10:54:45
+name : LXNPLBRY set Pos executed : (16316.8, 14241.7, 15748.5)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.8, 14241.7, 15748.5)-08/23/2013 10:54:45
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A45
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:45
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.7, 14241.7, 15748.5)-08/23/2013 10:54:46
+name : LXNPLBRY set Pos executed : (16316.7, 14241.7, 15748.5)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.7, 14241.7, 15748.5)-08/23/2013 10:54:46
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A46
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:46
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.7, 14241.7, 15748.6)-08/23/2013 10:54:47
+name : LXNPLBRY set Pos executed : (16316.7, 14241.7, 15748.6)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.7, 14241.7, 15748.6)-08/23/2013 10:54:47
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A47
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:54:47
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.7, 14241.7, 15748.6)-08/23/2013 10:54:48
+name : LXNPLBRY set Pos executed : (16316.7, 14241.7, 15748.6)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.7, 14241.7, 15748.6)-08/23/2013 10:54:48
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A48
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:54:48
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.9, 14241.7, 15748.5)-08/23/2013 10:54:49
+name : LXNPLBRY set Pos executed : (16316.9, 14241.7, 15748.5)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.9, 14241.7, 15748.5)-08/23/2013 10:54:49
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A49
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:54:49
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.5, 14241.4, 15748.2)-08/23/2013 10:54:50
+name : LXNPLBRY set Pos executed : (16318.5, 14241.4, 15748.2)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.5, 14241.4, 15748.2)-08/23/2013 10:54:50
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A50
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:54:50
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.6, 14241.4, 15748.2)-08/23/2013 10:54:52
+name : LXNPLBRY set Pos executed : (16318.6, 14241.4, 15748.2)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.6, 14241.4, 15748.2)-08/23/2013 10:54:52
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A52
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:52
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.5, 14241.4, 15747.4)-08/23/2013 10:54:53
+name : LXNPLBRY set Pos executed : (16318.5, 14241.4, 15747.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.5, 14241.4, 15747.4)-08/23/2013 10:54:53
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A53
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:53
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.9, 14241.1, 15744.8)-08/23/2013 10:54:54
+name : LXNPLBRY set Pos executed : (16318.9, 14241.1, 15744.8)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.9, 14241.1, 15744.8)-08/23/2013 10:54:54
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A54
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:54
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.0, 14241.1, 15741.9)-08/23/2013 10:54:55
+name : LXNPLBRY set Pos executed : (16318.0, 14241.1, 15741.9)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.0, 14241.1, 15741.9)-08/23/2013 10:54:55
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A55
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:55
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.0, 14241.1, 15742.0)-08/23/2013 10:54:56
+name : LXNPLBRY set Pos executed : (16318.0, 14241.1, 15742.0)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.0, 14241.1, 15742.0)-08/23/2013 10:54:56
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A56
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:56
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.5, 14241.1, 15744.1)-08/23/2013 10:54:57
+name : LXNPLBRY set Pos executed : (16318.5, 14241.1, 15744.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.5, 14241.1, 15744.1)-08/23/2013 10:54:57
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A57
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:57
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.1, 14241.6, 15747.4)-08/23/2013 10:54:58
+name : LXNPLBRY set Pos executed : (16316.1, 14241.6, 15747.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.1, 14241.6, 15747.4)-08/23/2013 10:54:58
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A58
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:58
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.5, 14241.6, 15747.8)-08/23/2013 10:54:59
+name : LXNPLBRY set Pos executed : (16316.5, 14241.6, 15747.8)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.5, 14241.6, 15747.8)-08/23/2013 10:54:59
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A54%3A59
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:54:59
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.5, 14241.6, 15747.8)-08/23/2013 10:55:00
+name : LXNPLBRY set Pos executed : (16316.5, 14241.6, 15747.8)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.5, 14241.6, 15747.8)-08/23/2013 10:55:00
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A00
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:00
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.5)-08/23/2013 10:55:01
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.5)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.5)-08/23/2013 10:55:01
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A01
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:01
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.4, 14241.3, 15743.8)-08/23/2013 10:55:02
+name : LXNPLBRY set Pos executed : (16315.4, 14241.3, 15743.8)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.4, 14241.3, 15743.8)-08/23/2013 10:55:02
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A02
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:02
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.1, 14241.1, 15743.1)-08/23/2013 10:55:03
+name : LXNPLBRY set Pos executed : (16318.1, 14241.1, 15743.1)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.1, 14241.1, 15743.1)-08/23/2013 10:55:03
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A03
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:03
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16318.1, 14241.1, 15743.2)-08/23/2013 10:55:04
+name : LXNPLBRY set Pos executed : (16318.1, 14241.1, 15743.2)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16318.1, 14241.1, 15743.2)-08/23/2013 10:55:04
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A04
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:04
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16316.4, 14241.5, 15746.3)-08/23/2013 10:55:05
+name : LXNPLBRY set Pos executed : (16316.4, 14241.5, 15746.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16316.4, 14241.5, 15746.3)-08/23/2013 10:55:05
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A05
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:05
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:06
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:06
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A06
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:06
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:07
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:07
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A07
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:07
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:08
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:08
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A08
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:08
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.4)-08/23/2013 10:55:09
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.4)-08/23/2013 10:55:09
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.0%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A09
+Ends.
+parsed last name prefix received : (16318.0, 14241.5, 15748.5)-08/23/2013 10:55:09
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:10
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:10
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A10
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:10
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.4)-08/23/2013 10:55:11
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.4)-08/23/2013 10:55:11
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A11
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:11
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:12
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:12
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A12
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:12
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:13
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:13
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816318.1%2C%2014241.5%2C%2015748.5%29-08%2F23%2F2013%2010%3A55%3A13
+Ends.
+parsed last name prefix received : (16318.1, 14241.5, 15748.5)-08/23/2013 10:55:13
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:14
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:14
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816317.0%2C%2014241.6%2C%2015747.3%29-08%2F23%2F2013%2010%3A55%3A14
+Ends.
+parsed last name prefix received : (16317.0, 14241.6, 15747.3)-08/23/2013 10:55:14
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:15
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:15
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816315.9%2C%2014241.6%2C%2015747.4%29-08%2F23%2F2013%2010%3A55%3A15
+Ends.
+parsed last name prefix received : (16315.9, 14241.6, 15747.4)-08/23/2013 10:55:15
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:16
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:16
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816315.9%2C%2014241.6%2C%2015747.5%29-08%2F23%2F2013%2010%3A55%3A16
+Ends.
+parsed last name prefix received : (16315.9, 14241.6, 15747.5)-08/23/2013 10:55:16
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:17
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:17
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816317.1%2C%2014241.3%2C%2015743.7%29-08%2F23%2F2013%2010%3A55%3A17
+Ends.
+parsed last name prefix received : (16317.1, 14241.3, 15743.7)-08/23/2013 10:55:17
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:18
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:18
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816314.4%2C%2014241.3%2C%2015744.5%29-08%2F23%2F2013%2010%3A55%3A18
+Ends.
+parsed last name prefix received : (16314.4, 14241.3, 15744.5)-08/23/2013 10:55:18
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:19
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:19
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816316.8%2C%2014241.6%2C%2015748.2%29-08%2F23%2F2013%2010%3A55%3A19
+Ends.
+parsed last name prefix received : (16316.8, 14241.6, 15748.2)-08/23/2013 10:55:19
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:20
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.3)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.3)-08/23/2013 10:55:20
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816321.1%2C%2014240.2%2C%2015751.4%29-08%2F23%2F2013%2010%3A55%3A20
+Ends.
+parsed last name prefix received : (16321.1, 14240.2, 15751.4)-08/23/2013 10:55:20
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.7, 14241.6, 15747.4)-08/23/2013 10:55:21
+name : LXNPLBRY set Pos executed : (16315.7, 14241.6, 15747.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.7, 14241.6, 15747.4)-08/23/2013 10:55:21
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816320.9%2C%2014239.9%2C%2015753.7%29-08%2F23%2F2013%2010%3A55%3A21
+Ends.
+parsed last name prefix received : (16320.9, 14239.9, 15753.7)-08/23/2013 10:55:21
+Ends.
+sync2 CCN_UPCALL_CONTENT
+Recved string:LXNPLBRY-0/0/7/7/5/7/6-(16315.8, 14241.6, 15747.4)-08/23/2013 10:55:22
+name : LXNPLBRY set Pos executed : (16315.8, 14241.6, 15747.4)Datetime and pos updated.
+outstanding interest string looks like : /ndn/ucla.edu/apps/matryoshka/doll/name/LXNPLBRY/position/(16315.8, 14241.6, 15747.4)-08/23/2013 10:55:22
+sync2 CCN_UPCALL_FINAL
+Name R3V2A1KX, sync interest received: CCN_UPCALL_INTEREST
+sync interest name received : /ndn/ucla.edu/apps/matryoshka/doll/name/R3V2A1KX/position/%2816320.9%2C%2014239.9%2C%2015753.7%29-08%2F23%2F2013%2010%3A55%3A22
+Ends.
+parsed last name prefix received : (16320.9, 14239.9, 15753.7)-08/23/2013 10:55:22
+Ends.
+sync2 CCN_UPCALL_INTEREST_TIMED_OUT
+sync2 CCN_UPCALL_FINAL
