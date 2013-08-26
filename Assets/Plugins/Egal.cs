@@ -362,6 +362,8 @@ public class Egal: MonoBehaviour {
 	[DllImport ("Egal")]
 	public static extern IntPtr Buffer(char mode, string name, string content);
 	
+	[DllImport ("Egal")]
+	public static extern IntPtr generateRightMostTemplate();
 //	[DllImport ("Egal")]
 //	public static extern IntPtr GetHandle();
 	

@@ -426,6 +426,11 @@ public class M : MonoBehaviour {
 		private System.DateTime time;
 		private Transform transform;
 		
+		public Transform getTrans()
+		{
+			return transform;	
+		}
+		
 		public int setPos(Vector3 pos)
 		{
 			transform.position = pos;

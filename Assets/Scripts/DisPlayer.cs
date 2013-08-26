@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+//Frame rate is limited to 30 in initialize script.
+
 using System.Runtime.InteropServices;
 
 public class DisPlayer : MonoBehaviour
@@ -25,9 +27,11 @@ public class DisPlayer : MonoBehaviour
 	public const string uniStrPrefix = "doll/name/";
 	public const string syncStrPrefix = "doll/octant/";
 	public const string posStrPrefix = "/position/";
-	public const string initialPosStrPrefix = "init/";
+	public const string initialPosStrPrefix = "";
+	
 	public static string debugFilePath = "";
 	public static string myName;
+	
 	public const int nameLength = 8;
 	
 	//generate random my name using system.linq
@@ -59,7 +63,20 @@ public class DisPlayer : MonoBehaviour
 					if ( s != myName && s != null && s != "" )
 					{
 						string interestName = prefixStr + uniStrPrefix + s + posStrPrefix + initialPosStrPrefix;
-						Egal.ExpressInterest (Handle.ccn, interestName, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
+						//try to fetch the latest piece of data using rightmost when init?
+						//express is not used because it needs template to set RightMost
+						IntPtr nm = Egal.ccn_charbuf_create();
+						
+						//this seems to be working with ccnb, which seems correct with nm, however answer_highest still results in error here.
+						Egal.ccn_name_from_uri(nm,interestName);
+						
+						Egal.ccn_closure Action = new Egal.ccn_closure(onReceiveSync2Data, IntPtr.Zero, 0);
+						IntPtr pnt = Marshal.AllocHGlobal(Marshal.SizeOf(Action));
+						Marshal.StructureToPtr(Action, pnt, true);
+						//Egal.generateRightMostTemplate()
+						Egal.ccn_express_interest(Handle.ccn,nm,pnt,IntPtr.Zero);
+		
+						//Egal.ExpressInterest (Handle.ccn, interestName, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
 						System.IO.File.AppendAllText (debugFilePath, "myName : " + myName + ", received name : " + s + "\nExpressed interest name : " + interestName + "\n");
 					}
 				}
@@ -72,7 +89,7 @@ public class DisPlayer : MonoBehaviour
 		}
 		catch (Exception e)
 		{
-			System.IO.File.AppendAllText (debugFilePath, "Error in sync1Callback" + e.Message);
+			System.IO.File.AppendAllText (debugFilePath, "Error in sync1Callback " + e.Message);
 		}
 		return 1;
 	}
@@ -118,10 +135,9 @@ public class DisPlayer : MonoBehaviour
 			{
 				
 			case Upcall.ccn_upcall_kind.CCN_UPCALL_CONTENT:
-				string outsInterestStr = Egal.getInterestNameFromPI (info);
 				string content = Egal.GetContentValue (upcallInfo.content_ccnb, upcallInfo.pco);
 			
-			//received string always looks like : name-octant-position-datetime
+				//received string always looks like : name-octant-position-datetime
 				System.IO.File.AppendAllText (debugFilePath, "Recved string:" + content + "\n");
 				string [] splitStr = content.Split ('-');
 				string playerName = splitStr [0];
@@ -138,45 +154,51 @@ public class DisPlayer : MonoBehaviour
 					M.cPlayerTime tempPT = new M.cPlayerTime (playerName, t, instantiateNewPlayer (playerName, playerPos));
 				
 					octPlayerList.Add (playerOct, tempPT);
+					playerTime = tempPT;
 					System.IO.File.AppendAllText (debugFilePath, "Player instantiated:" + playerName + "-" + playerOct + "-" + playerPos + "\n");
 				}
 				else
 				{
 					//received interest has a newer T
+					//try to update class playerTime with a new t
 					if ( octPlayerList.updatePlayerTime (playerOct, playerTime, t) )
 					{
 						playerTime.setPos (playerPos);
+						System.IO.File.AppendAllText (debugFilePath, "Datetime and pos updated.\n");
 					}
-					System.IO.File.AppendAllText (debugFilePath, "Datetime and pos updated.\n");
+					else
+					{
+						System.IO.File.AppendAllText(debugFilePath, "Datetime and pos out-of-date.\n");
+					}
 				}
-				//express interest again...not using exclusion filter here.
+				//Use current latest position to express interest again...not using exclusion filter here.
 			
-				string [] nameComponents = outsInterestStr.Split ('/');
-				outsInterestStr = "";
-				for (int i = 0; i< nameComponents.Length - 1; i++)
-				{
-					outsInterestStr += (nameComponents [i] + "/");
-				}
-			
+				string outsInterestStr = Egal.getInterestNameFromPI (info);
+				
 				IntPtr nm = Egal.ccn_charbuf_create ();
 				Egal.ccn_name_from_uri (nm, outsInterestStr);
-				Egal.ccn_name_append_str (nm, splitStr [2] + "-" + splitStr [3]);
+				//answer highest applies a 'Rightmost-Child' selector to the interest, I think the position of answer_highest matters,
+				//which step should be choosing the rightmost-child?
+				
+				//Using fetch from sources would solve such a proble. It's not the final solution and I haven'y found out noe touse that yet
+				//haven't figured out how to solve the problem of 'three' yet...
+				
+				//Egal.answer_highest(nm);
+				//datetime-position
+				Egal.ccn_name_append_str (nm, playerTime.getTime() + "-" + playerTime.getTrans().position);
 			
 				Egal.ccn_closure Action = new Egal.ccn_closure (onReceiveSync2Data, IntPtr.Zero, 0);
 				IntPtr pnt = Marshal.AllocHGlobal (Marshal.SizeOf (Action));
 				Marshal.StructureToPtr (Action, pnt, true);
 				
 				//one second interval between two outstanding interest expressions
-				System.Threading.Thread.Sleep(1000);
+				System.Threading.Thread.Sleep(100);
 				Egal.ccn_express_interest (upcallInfo.h, nm, pnt, IntPtr.Zero);
 			
-				outsInterestStr += (splitStr [2] + "-" + splitStr [3]);
+				outsInterestStr += (playerTime.getTime() + "-" + playerTime.getTrans().position);
 				System.IO.File.AppendAllText (debugFilePath, "outstanding interest string looks like : " + outsInterestStr + "\n");
 			
-			//could be something wrong while expressing interest? ExpressInterest encapsulation could be wrong?
-			//other parts, like datetime-string conversion should be checked as well, plus sync2 logic needs to be double checked
-			//the problem is that either position update or init triggers onReceiveSync2Interest, instead of both of them. 
-			//Egal.ExpressInterest(Handle.sync2ccn, outsInterestStr, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
+				//Egal.ExpressInterest(Handle.sync2ccn, outsInterestStr, onReceiveSync2Data, IntPtr.Zero, IntPtr.Zero);
 				break;
 			case Upcall.ccn_upcall_kind.CCN_UPCALL_CONTENT_UNVERIFIED:
 			
@@ -207,34 +229,49 @@ public class DisPlayer : MonoBehaviour
 			{
 			case Upcall.ccn_upcall_kind.CCN_UPCALL_INTEREST:
 				Egal.ccn_upcall_info upcallInfo = (Egal.ccn_upcall_info)Marshal.PtrToStructure (info, typeof(Egal.ccn_upcall_info));
-				//fixed a silly bug caused by trying to extract 'info' from TIMED_OUT
+				//fixed a bug caused by trying to extract 'info' from TIMED_OUT
 				string s = Egal.getInterestNameFromPI (info);
 				System.IO.File.AppendAllText (debugFilePath, "sync interest name received : " + s + "\nEnds.\n");
 				print (s);
-			
+				string [] nameComponents = s.Split('/');
+				
 				if ( s.Contains (myName) && s.Contains ("position") )
 				{
-					if ( s.Contains ("init") )
+					if ( nameComponents[nameComponents.Length - 1] == "position" )
 					{
+						System.IO.File.AppendAllText(debugFilePath, "recved initial interest");
+						
 						string returnStr = myName + "-" + Discovery.aura [0] + "-" + GameObject.Find ("/player").transform.position + '-' + System.DateTime.Now.ToString ();
 						//I failed when trying to use C# code to sign and return content...using C library code instead
 						Egal.returnVerifiedStrContent (returnStr, info);
-						System.IO.File.AppendAllText (debugFilePath, "ccn_put\n");
 					}
 					else
 					{
-					
 						string tempStr = Egal.getNameLastStrComponent (info);
 						System.IO.File.AppendAllText (debugFilePath, "parsed last name prefix received : " + tempStr + "\nEnds.\n");
 			
 						string [] posTimeStr = tempStr.Split ('-');
 						
-						Vector3 pos = getVector3FromStr (posTimeStr [0]);
-						DateTime t = DateTime.Parse (posTimeStr [1]);
+						//Important
+						//I'm only responding position interest that's issued to me, which means I don't have to actually get any information from the interest name...
+						//so why use a datetime?
+						Vector3 pos = getVector3FromStr (posTimeStr [1]);
+						DateTime t = DateTime.Parse (posTimeStr [0]);
 					
 						if ( octPlayerList.getPlayerTimeByName (Discovery.aura [0], myName) != null )
 						{
-							string returnStr = myName + "-" + Discovery.aura [0] + "-" + GameObject.Find ("/player").transform.position + '-' + System.DateTime.Now.ToString ();
+							string returnStr = myName + "-" + Discovery.aura [0] + "-" + GameObject.Find ("/player").transform.position + '-';
+							//seems to me that using local position sequence number is better....
+							if (t == System.DateTime.Now)
+							{
+								//this alternative can cause others to express interest on my location with newer timestamp than my current timestamp.
+								returnStr += (System.DateTime.Now.AddSeconds(1)).ToString();	
+								System.IO.File.AppendAllText(debugFilePath, "returnStr with identical time as now : " + returnStr);
+							}
+							else
+							{
+								returnStr += System.DateTime.Now;
+							}
 							Egal.returnVerifiedStrContent (returnStr, info);
 						}
 					}
@@ -286,7 +323,7 @@ public class DisPlayer : MonoBehaviour
 		
 		//set interest filter for unicast interests
 		IntPtr name = Egal.ccn_charbuf_create ();
-		string nameStr = prefixStr + uniStrPrefix;
+		string nameStr = prefixStr + uniStrPrefix + myName + "/";
 		
 		Egal.ccn_name_from_uri (name, nameStr);
 		
@@ -295,7 +332,7 @@ public class DisPlayer : MonoBehaviour
 		Marshal.StructureToPtr (closure, pnt, true);
 		
 		Egal.ccn_set_interest_filter (Handle.ccn, name, pnt);
-		System.IO.File.AppendAllText (debugFilePath, "Registered sync2 interest: " + prefixStr + uniStrPrefix + "\n");
+		System.IO.File.AppendAllText (debugFilePath, "Registered sync2 interest: " + nameStr + "\n");
 	}
 	
 	public static void addPlayerBySpace ( List<String> toadd )
@@ -340,7 +377,9 @@ public class DisPlayer : MonoBehaviour
 	void Start ()
 	{
 		//using /player here causes Unity to crash, probably because of two CharacterControls? Stuff like that?
+		//using /player/graphics/doll creates a super small doll...I'll not work on resizing it now.
 		player = GameObject.Find ("/player/graphics").transform;
+		
 	}
 }
 
