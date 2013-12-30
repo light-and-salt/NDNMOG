@@ -4,8 +4,10 @@
 July 02, 2013
 by Zening Qu (quzening@remap.ucla.edu)
 
-## How To Run
+Dec 30, 2013
+Updated by Zhehao Wang (wangzhehao410305@gmail.com)
 
+## How To Run
 1. ccndstart
 2. ccndc add / tcp lioncub.metwi.ucla.edu
 3. double click Matryoshka20130702.app
@@ -13,12 +15,10 @@ by Zening Qu (quzening@remap.ucla.edu)
 ## What To See
 1. asteroids created & destroyed as player flies around
 2. NDN names labeled for player and asteroids
+3. Other player's matryoshkas and their position update if other instances are running.
 
 ## What Is New
-1. render is more smooth
-2. added NDN name labels for asteroids and player
-3. got rid of thread pool; use one thread and one shared handle
-
+1. Sync one player discovery and sync two positon updates are implemented
 
 # Control Keys
 1. arrows: go left/right, walk back/forth, fly up/down
@@ -32,3 +32,7 @@ by Zening Qu (quzening@remap.ucla.edu)
 ## Known Issue
 1. some NDN names keep floating on the screen before being deleted
 2. doll sometimes crashes through asteroids when flying too fast
+
+## Further implementation
+1. Player does not vanish even if they are out of the range of detection. Events 'player out of range' and 'player exit' are to be handled
+2. Position updates lag when 3 or more instances are running. Need to fix that along with the current position updates mechanisms
